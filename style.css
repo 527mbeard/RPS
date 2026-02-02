@@ -1,0 +1,21 @@
+body {
+  background: url('background.jpg');
+  background-size: cover;
+  font-family: Georgia, serif;
+}
+
+.name-card {
+  background-color: #d6b48c;
+  border-radius: 15px;
+  max-width: 350px;
+}
+
+.choice-img {
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choice-img:hover {
+  transform: scale(1.1);
+}

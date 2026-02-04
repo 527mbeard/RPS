@@ -1,21 +1,121 @@
 body {
-  background: url('background.jpg');
+  background-image: url(background.jpg);
   background-size: cover;
-  font-family: Georgia, serif;
+  font-family: 'Georgia', serif;
+  cursor: url('whisk.png'), auto;
 }
 
-.name-card {
-  background-color: #d6b48c;
+.screen {
+  display: none;
+  min-height: 100vh;
+}
+
+.active {
+  display: flex;
+}
+
+.card-box {
+  background: #D2B48C;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.choice-btn {
+  font-size: 1.2rem;
+  margin: 10px;
+  padding: 15px 20px;
   border-radius: 15px;
-  max-width: 350px;
 }
 
-.choice-img {
-  width: 140px;
-  cursor: pointer;
-  transition: transform 0.2s;
+.hearts {
+  font-size: 1.4rem;
+  color: red;
 }
 
-.choice-img:hover {
-  transform: scale(1.1);
+.result {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.backer {
+  background-color: #FFB6B9;
+  border-color: #FFB6B9;
+  text-align: center;
+}
+
+/* Ensure inputs WITH the class 'backer' keep the pink background; text becomes white while typing */
+input.backer,
+textarea.backer,
+select.backer {
+  background-color: #FFB6B9 !important;
+  border: 1px solid #FFB6B9 !important;
+  color: #000 !important;
+  padding: .5rem;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input.backer:focus,
+textarea.backer:focus,
+select.backer:focus {
+  background-color: #FFB6B9 !important;
+  color: #000 !important;
+  box-shadow: 0 0 0 3px rgba(255, 182, 185, 0.3) !important;
+  border-color: #FFB6B9 !important;
+}
+
+.choice-btn {
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px;
+  background-color:white;
+}
+
+.choice-btn img{
+  width:300%;
+  height:300%;
+}
+
+.choice-btn2 {
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px;
+  background-color:white;
+}
+
+.choice-btn2 img {
+  display: block;
+  width: 300%;
+  height: 300%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transform: translateY(-20px);
+  transform: translateX(20px);
+} 
+
+h3 {
+  font-family: "ziclets", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align:center;
 }

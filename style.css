@@ -20,8 +20,10 @@ body {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 200%;
+  max-width: 700px;
   width: 100%;
-  max-width: 500px;
+  max-height: 700px;
 }
 
 .choice-btn {

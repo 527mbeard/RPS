@@ -18,6 +18,12 @@
   <div id="screen-name" class="screen active justify-content-center align-items-center">
     <div class="card-box">
       <h3>What is your name?</h3>
+      <div class="camera-container">
+        <video id="video" autoplay playsinline></video>
+        <button id="snap">Take Photo</button>
+        <canvas id="canvas"></canvas>
+        <img id="playerPhoto" alt="Your photo">
+      </div>
       <input id="playerNameInput" class="form-control my-3 backer" placeholder="Enter name">
     </div>
   </div>
@@ -26,9 +32,9 @@
   <div id="screen-choose" class="screen justify-content-center align-items-center">
     <div class="card-second">
       <h3>Choose</h3>
-      <button class="btn choice-btn" onclick="play('rock')"><img src="cupcake.png"></button>
+      <button class="btn choice-btn1" onclick="play('rock')"><img src="cupcake.png"></button>
       <button class="btn choice-btn2" onclick="play('paper')"><img src="cake.png"></button>
-      <button class="btn choice-btn" onclick="play('scissors')"><img src="cookie.png"></button>
+      <button class="btn choice-btn3" onclick="play('scissors')"><img src="cookie.png"></button>
     </div>
   </div>
 
@@ -39,18 +45,20 @@
 
       <div class="row mt-3">
         <div class="col">
+          <img id="playerPhotoGame" alt="Your photo">
           <strong id="playerName"></strong>
           <div class="hearts" id="playerHearts">❤️❤️❤️</div>
         </div>
         <div class="col">
-          <strong>Computer</strong>
+          <img class="gingyimg" src="gingy.png">
+          <strong>Gingerbread Man</strong>
           <div class="hearts" id="computerHearts">❤️❤️❤️</div>
         </div>
       </div>
 
       <div class="result" id="roundResult"></div>
 
-      <button class="btn btn-secondary mt-3" onclick="goChoose()">Next Round</button>
+      <button class="btn backer mt-3" onclick="goChoose()">Next Round</button>
     </div>
   </div>
 

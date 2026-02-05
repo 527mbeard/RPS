@@ -70,7 +70,7 @@ select.backer:focus {
   border-color: #FFB6B9 !important;
 }
 
-.choice-btn {
+.choice-btn1 {
   padding: 0;
   width: 200px;
   height: 200px;
@@ -80,12 +80,14 @@ select.backer:focus {
   justify-content: center;
   overflow: hidden;
   margin: 10px;
-  background-color:white;
+  background-color: white;
 }
 
-.choice-btn img{
-  width:300%;
-  height:300%;
+.choice-btn1 img {
+  width: 200%;
+  height: 200%;
+  transform: translateY(-20px);
+  ;
 }
 
 .choice-btn2 {
@@ -98,7 +100,7 @@ select.backer:focus {
   justify-content: center;
   overflow: hidden;
   margin: 10px;
-  background-color:white;
+  background-color: white;
 }
 
 .choice-btn2 img {
@@ -109,13 +111,83 @@ select.backer:focus {
   margin: 0;
   padding: 0;
   border: 0;
-  transform: translateY(-20px);
-  transform: translateX(20px);
-} 
+  transform: translateX(15px) translateY(-45px);
+}
+
+.choice-btn3 {
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+}
+
+.choice-btn3 img {
+  width: 300%;
+  height: 300%;
+}
+
+.gingyimg {
+  display: block;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 h3 {
   font-family: "ziclets", sans-serif;
   font-weight: 500;
   font-style: normal;
-  text-align:center;
+  text-align: center;
+}
+
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+video, img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+}
+
+canvas {
+  display: none;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#playerPhoto {
+  display: none;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

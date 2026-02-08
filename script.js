@@ -20,14 +20,21 @@ let playerName = "";
 let playerLives = 3;
 let computerLives = 3;
 
-
 function showScreen(id) {
-    document.querySelectorAll('.screen').forEach(s =>
-        s.classList.remove('active')
-    );
-    document.getElementById(id).classList.add('active');
-}
+  const current = document.querySelector('.screen.active');
+  const next = document.getElementById(id);
 
+  if (current === next) return;
+
+  if (current) {
+    current.classList.remove('active');
+    setTimeout(() => {
+      next.classList.add('active');
+    }, 600); // matches CSS transition time
+  } else {
+    next.classList.add('active');
+  }
+}
 
 function startGame() {
     playerName =
@@ -51,7 +58,7 @@ function play(playerChoice) {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * 3)];
 
-    let resultText = `You chose ${playerChoice}, computer chose ${computerChoice}. `;
+    let resultText = `You chose ${playerChoice}, Gingerbread man chose ${computerChoice}. `;
 
     if (playerChoice === computerChoice) {
         resultText += "It's a tie!";
@@ -64,7 +71,7 @@ function play(playerChoice) {
         resultText += `${playerName} wins this round!`;
     } else {
         playerLives--;
-        resultText += "Computer wins this round!";
+        resultText += "Gingerbread man wins this round!";
     }
 
     updateHearts();
@@ -88,7 +95,7 @@ function gameOver() {
     document.getElementById('gameOverText').textContent =
         playerLives > 0
             ? `${playerName} Wins! 🎉`
-            : "Computer Wins 💻";
+            : "Gingerbread man Wins";
     showScreen('screen-gameover');
 }
 

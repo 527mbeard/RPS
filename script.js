@@ -17,8 +17,8 @@
 
 let playerPhotoData = null;
 let playerName = "";
-let playerLives = 3;
-let computerLives = 3;
+let playerLives = 5;
+let computerLives = 5;
 
 function showScreen(id) {
   const current = document.querySelector('.screen.active');
@@ -55,7 +55,7 @@ function play(playerChoice) {
         gamePhoto.style.display = "block";
     }
 
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ['cupcake', 'cake', 'cookie'];
     const computerChoice = choices[Math.floor(Math.random() * 3)];
 
     let resultText = `You chose ${playerChoice}, Gingerbread man chose ${computerChoice}. `;
@@ -63,9 +63,9 @@ function play(playerChoice) {
     if (playerChoice === computerChoice) {
         resultText += "It's a tie!";
     } else if (
-        (playerChoice === 'rock' && computerChoice === 'scissors') ||
-        (playerChoice === 'paper' && computerChoice === 'rock') ||
-        (playerChoice === 'scissors' && computerChoice === 'paper')
+        (playerChoice === 'cupcake' && computerChoice === 'cookie') ||
+        (playerChoice === 'cake' && computerChoice === 'cupcake') ||
+        (playerChoice === 'cookie' && computerChoice === 'cake')
     ) {
         computerLives--;
         resultText += `${playerName} wins this round!`;
@@ -94,14 +94,14 @@ function updateHearts() {
 function gameOver() {
     document.getElementById('gameOverText').textContent =
         playerLives > 0
-            ? `${playerName} Wins! 🎉`
+            ? `${playerName} Wins!`
             : "Gingerbread man Wins";
     showScreen('screen-gameover');
 }
 
 function resetGame() {
-    playerLives = 3;
-    computerLives = 3;
+    playerLives = 5;
+    computerLives = 5;
     updateHearts();
     showScreen('screen-name');
 }

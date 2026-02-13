@@ -179,6 +179,15 @@ h3 {
   font-size:40px;
 }
 
+h2{
+  font-family: "ziclets", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 2px 2px 5px white;
+  font-size:20px;
+}
+
 .camera-container {
   display: flex;
   flex-direction: column;

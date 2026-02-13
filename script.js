@@ -177,3 +177,32 @@ snap.addEventListener("click", () => {
         track.stop()
     );
 });
+
+let quotesArray = [
+    'You win!',
+    'Congrats!',
+    'It is not important to window, it is important to make the other guy lose.',
+    'Now we have a one-game winning streak ',
+    'You are amazing ',
+    'Good Job! ',
+    'Rock Paper Scissors Champion! '
+];
+
+function generateRandomNumber() {
+    let rndmNum = Math.floor(Math.random() * 7)
+    return rndmNum
+}
+
+function generateQuote(num) {
+    document.getElementById('press-quote').textContent = quotesArray[num]
+}
+
+function buildPage() {
+    generateQuote(generateRandomNumber());
+}
+
+buildPage()
+
+
+
+
